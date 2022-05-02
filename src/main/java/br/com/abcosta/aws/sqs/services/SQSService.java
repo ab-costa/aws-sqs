@@ -1,7 +1,5 @@
 package br.com.abcosta.aws.sqs.services;
 
-import org.springframework.boot.autoconfigure.info.ProjectInfoProperties.Build;
-
 import software.amazon.awssdk.auth.credentials.AwsCredentials;
 import software.amazon.awssdk.auth.credentials.AwsCredentialsProvider;
 import software.amazon.awssdk.regions.Region;
@@ -38,7 +36,7 @@ public class SQSService {
 
         GetQueueUrlRequest request = GetQueueUrlRequest.builder()
                                                        .queueName("fila-teste.fifo")
-                                                       .queueOwnerAWSAccountId("")
+                                                       .queueOwnerAWSAccountId("163827816258")
                                                        .build();
 
         GetQueueUrlResponse queueUrl = sqsClient.getQueueUrl(request);
